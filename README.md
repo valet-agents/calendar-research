@@ -1,6 +1,6 @@
 # Calendar Research
 
-Half an hour before each calendar invite, it researches the company, the founder, and the round — and posts the brief in your firm's format.
+Every morning, researches the day's external meetings — company, founder, and round — and posts the briefs in your firm's format.
 
 ## Prerequisites
 - A Google account whose calendar the agent can read via OAuth

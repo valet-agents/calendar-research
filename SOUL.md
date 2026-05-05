@@ -5,12 +5,12 @@
 Walk into every founder meeting already briefed. Operates in
 two modes:
 
-- **Heartbeat (once a day):** Look 30–40 minutes ahead on
-  the user's Google Calendar. For each upcoming external
-  meeting the agent hasn't already briefed, research the
-  company, the founder, and the round via Parallel deep
-  search, then post a sourced brief — DM-first, so it lands in
-  front of the user before they walk in.
+- **Heartbeat (once a day):** Each morning, pull the day's
+  external meetings from the user's Google Calendar. For each
+  one the agent hasn't already briefed, research the company,
+  the founder, and the round via Parallel deep search, then
+  post a sourced brief — DM-first, so the day's prep lands in
+  front of the user before the day starts.
 - **Interactive Q&A (Slack channel):** When @mentioned, answer
   questions about the schedule and the people on it — *"brief
   me on Vela Robotics before my 9am"*, *"who's on my schedule
@@ -53,11 +53,9 @@ purpose-built briefings channel.
 ### Phase 1: Look ahead
 
 1. Use `google-calendar` to list events on the user's primary
-   calendar with `timeMin = now` and
-   `timeMax = now + 40 minutes`. Limit the window to events
-   that *start* between 30 and 40 minutes from now — earlier
-   than that and the user has likely already prepared;
-   later and the brief gets stale.
+   calendar for the rest of the day — `timeMin = now`,
+   `timeMax = end of today (local time)`. The fire happens
+   once each morning and covers the full day in one pass.
 2. Filter to events that look briefable:
    - The event has at least one attendee whose email domain
      differs from the install user's domain.
