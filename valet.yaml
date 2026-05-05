@@ -1,0 +1,88 @@
+name: calendar-research
+display_name: Calendar Research
+description: >-
+  Half an hour before each calendar invite, it researches the
+  company, the founder, and the round — and posts the brief in
+  your firm's format. @mention it any time for an ad-hoc brief
+  or a look at what's on your schedule.
+category: venture
+
+story:
+  hero: "Walk into every founder meeting already briefed."
+  subheadline: >-
+    Half an hour before each calendar invite, it researches the
+    company, the founder, and the round — and posts the brief
+    in your firm's format.
+  steps:
+    - role: trigger
+      title: "30 minutes before your meeting."
+      body: >-
+        The heartbeat fires every 5 minutes and looks 30–40
+        minutes ahead on your calendar. No meeting prep ritual
+        to remember.
+    - role: action
+      title: "It researches the company and founder."
+      body: >-
+        Pulls the company one-liner, founder background, latest
+        round, and recent news via Parallel deep search — every
+        claim cited.
+      catalog: google-calendar
+    - role: outcome
+      title: "A brief in your inbox before you walk in."
+      body: >-
+        DM'd to you in Slack — under 250 words, sourced, framed
+        for a partner conversation. @mention it back for an
+        ad-hoc brief any time.
+      catalog: slack
+
+connectors:
+  - catalog: google-calendar
+    description: >-
+      Google Calendar via OAuth. The agent reads the install
+      user's primary calendar to look 30–40 minutes ahead for
+      upcoming meetings, extract attendees and notes, and
+      answer ad-hoc schedule questions in Slack. Read-only.
+    ui:
+      headline: "Connect Google Calendar with one click."
+      blurb: >-
+        OAuth into Google — no API token to paste. The agent
+        uses your calendar permissions to read upcoming
+        meetings and the people on them.
+      done_note: "Calendar connected"
+
+  - catalog: parallel-search-mcp
+    description: >-
+      Parallel's deep-research search MCP. The agent uses it
+      to research each upcoming external meeting — company
+      one-liner, founder background, latest funding, recent
+      news — with source URLs returned alongside every result.
+      Keyless — no token required.
+    ui:
+      headline: "Add Parallel deep research."
+      blurb: >-
+        One-click connector for Parallel's search MCP — no API
+        key to manage. Powers the sourced founder briefs the
+        agent posts before each meeting.
+      done_note: "Parallel ready"
+
+channels:
+  - catalog: slack
+    description: >-
+      The agent gets its own Slack bot. By default it DMs the
+      install user with each pre-meeting brief — invite the
+      bot to a dedicated `#briefings` channel if you'd rather
+      have briefs land there, and to any channel where
+      teammates should be able to @mention it for ad-hoc
+      research.
+    ui:
+      headline: "Give Calendar Research a Slack bot."
+      blurb: >-
+        Briefs land in your DMs by default — invite the bot to
+        a `#briefings` (or `#prep`, `#meetings`) channel to
+        route them there instead. @mention it anywhere for
+        ad-hoc briefs.
+      done_note: "Bot ready — briefs will DM you"
+
+  - type: heartbeat
+    every: 5m
+    description: "Looks 30–40 minutes ahead on the calendar every 5 minutes for upcoming meetings to brief."
