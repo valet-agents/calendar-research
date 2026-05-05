@@ -6,6 +6,9 @@ description: >-
   format before the day starts.
 category: venture
 
+example:
+  prompt: "Brief me on Vela Robotics before my 9am."
+
 story:
   hero: "Walk into every founder meeting already briefed."
   subheadline: >-
