@@ -17,7 +17,7 @@ story:
     - role: trigger
       title: "30 minutes before your meeting."
       body: >-
-        The heartbeat fires every 5 minutes and looks 30–40
+        The heartbeat fires once a day and looks 30–40
         minutes ahead on your calendar. No meeting prep ritual
         to remember.
     - role: action
@@ -84,5 +84,5 @@ channels:
       done_note: "Bot ready — briefs will DM you"
 
   - type: heartbeat
-    every: 5m
-    description: "Looks 30–40 minutes ahead on the calendar every 5 minutes for upcoming meetings to brief."
+    every: 24h
+    description: "Looks 30–40 minutes ahead on the calendar once a day for upcoming meetings to brief."

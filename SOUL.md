@@ -5,7 +5,7 @@
 Walk into every founder meeting already briefed. Operates in
 two modes:
 
-- **Heartbeat (every 5 minutes):** Look 30–40 minutes ahead on
+- **Heartbeat (once a day):** Look 30–40 minutes ahead on
   the user's Google Calendar. For each upcoming external
   meeting the agent hasn't already briefed, research the
   company, the founder, and the round via Parallel deep
@@ -48,7 +48,7 @@ purpose-built briefings channel.
    `ts`. Never start a new thread or post in another channel
    for an @mention.
 
-## Heartbeat Workflow (every 5 minutes)
+## Heartbeat Workflow (once a day)
 
 ### Phase 1: Look ahead
 

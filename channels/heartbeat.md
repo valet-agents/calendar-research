@@ -1,6 +1,6 @@
 # Pre-Meeting Brief Sweep (Heartbeat)
 
-The heartbeat channel fires every 5 minutes. There is no payload
+The heartbeat channel fires once a day. There is no payload
 to parse — your job is to look 30–40 minutes ahead on the
 install user's calendar, brief any external meeting that hasn't
 been briefed yet, and post the brief DM-first.

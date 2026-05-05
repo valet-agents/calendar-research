@@ -9,7 +9,7 @@ Half an hour before each calendar invite, it researches the company, the founder
 <table>
   <tr>
     <td><strong>CHANNELS</strong></td>
-    <td><code>slack</code> · <code>heartbeat</code> — every 5m</td>
+    <td><code>slack</code> · <code>heartbeat</code> — daily</td>
   </tr>
   <tr>
     <td><strong>CONNECTORS</strong></td>
